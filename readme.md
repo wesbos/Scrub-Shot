@@ -5,6 +5,7 @@ A 100% browser based application that will take frames from your video as you sc
 Kinda cool, it uses:
 
 * FileReader API
+* Drag n' Drop API
 * Canvas API
 * HTML Video
 * TypeScript
