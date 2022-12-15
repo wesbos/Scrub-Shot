@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --bachelor-blue: #758391;
+  --wizard: #40466D;
+
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--bachelor-blue);
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(to top, #000428, #004e92);
+}
+
+body.dragging {
+  background: var(--wizard);
+}
+
+
+.app {
+  display: grid;
+  padding: 50px;
+  height: 100vh;
+  grid-template-rows: auto 5fr 1fr;
+  place-items: center;
+}
+
+.video {
+  /* width: 100%;
+  height: 100%; */
+  display: grid;
+  grid-template-columns: 50% 50%;
+  place-items: center;
+  padding: 10px;
+  height: 450px;
+}
+.app video {
+  height: 100%;
+  width: 100%;
+}
+
+.reel {
+  position: relative;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  padding: 20px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 20px;;
+  scrollbar-color: var(--wizard) transparent;
+  z-index: 2;
+}
+
+.reel > a {
+  padding: 0 10px;
+}
+
+.reel img {
+  flex: 1;
+  height: 200px;
+}
+
+.reel img:hover {
+  transform: scale(1.1);
+}
+
+.viewer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.viewer canvas, .viewer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.viewer img {
+  z-index: 2;
+  border: 0;
+  outline: none;
+}
